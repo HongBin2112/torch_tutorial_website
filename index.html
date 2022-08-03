@@ -36,11 +36,6 @@
               <a class="nav-link active" aria-current="page" href="#">Menu</a>
             </li>
 
-
-            <li class="nav-item">
-              <a class="nav-link active" href="https://github.com/DongDong-Zoez/pytorchAI"> About </a>
-            </li>
-
             <li class="nav-item">
               <a class="nav-link active" href="https://github.com/DongDong-Zoez/pytorchAI"> Github </a>
             </li>
@@ -59,6 +54,9 @@
 
             </li>
 
+            <li class="nav-item">
+              <a class="nav-link active" href="https://github.com/DongDong-Zoez/pytorchAI"> About </a>
+            </li>
             <!--
               <li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>
@@ -84,6 +82,62 @@
     </div>
 
 
+
+
+    <div class="content_intro_card_box">
+
+      <div class="content_intro_card">
+
+        <h1>Part I : Pytorch basis</h1>
+        <hr class="hr_half_width_center">
+
+        <ul>
+          <li>Varibale</li>
+          <li>Module</li>
+          <li>dataloader</li>
+          <li>augmentation</li>
+          <li>optimizer</li>
+        </ul>
+
+      </div>
+
+      <div class="content_intro_card">
+
+        <h1>Part II : CNN tasks</h1>
+        <hr class="hr_half_width_center">
+        
+        <ul>
+          <li>CIFAR-10-classification</li>
+          <li>Federated Learning</li>
+          <li>Segmentation</li>
+          <li>model architecture</li>
+        </ul>        
+
+      </div>
+
+      <div class="content_intro_card">
+
+        <h1>Part III : Others</h1>
+        <hr class="hr_half_width_center">
+        
+        <ul>
+          <li>ExplainableAI - Grad-CAM </li>
+          <li>CRFs - ConvCRFs</li>
+        </ul>        
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
     
 
     <div class="content_part_box">
@@ -103,7 +157,8 @@
         <div class="content_info_text">
           <p class="content_info_text_title"> 1. Varibale</p>
           <h1 class="content_info_text_h1">Pytorch Tensor</h1>
-          <h5>在 pytorch 這個框架中，所有的運算、資料流動或是其他數學方法的底層都是張量 (tensor)，pytorch tensor 有著和 Numpy 同樣方便的函數以及操作方法，基本上我們可以直接套用 numpy 的邏輯到 tensor 處理上面，除此之外，也有很多類似函數提供使用。</h5>  
+          
+          在 pytorch 這個框架中，所有的運算、資料流動或是其他數學方法的底層都是張量 (tensor)，pytorch tensor 有著和 Numpy 同樣方便的函數以及操作方法，基本上我們可以直接套用 numpy 的邏輯到 tensor 處理上面，除此之外，也有很多類似函數提供使用。
         </div>
 
      </div>
@@ -112,16 +167,15 @@
       <div class="content_info_box">
 
         <div class="content_info_img">
-          <img src="./assets/dongdong_zoez.png"  class="img-fluid" alt="Part I, 2. Varibale" />
+          <img src="./assets/dongdong_zoez.png"  class="img-fluid" alt="Part I, 2. Module" />
         </div>
         
         <div class="content_info_text">
-          <p class="content_info_text_title"> 2. Varibale</p>
-          <h1 class="content_info_text_h1">Pytorch Tensor</h1>
-          <h5>forward(): 前向傳播的方法，回傳模型的輸出</h5>
-          <h5>另外 nn 底下的 built-in 函數都會自動放在 nn.Parameter 裡面，所以不用特定再聲明</h5>
-          <h5>我們先來看一個非常簡單的例子</h5>             
-          <h5>在 pytorch 這個框架中，所有的運算、資料流動或是其他數學方法的底層都是張量 (tensor)，pytorch tensor 有著和 Numpy 同樣方便的函數以及操作方法，基本上我們可以直接套用 numpy 的邏輯到 tensor 處理上面，除此之外，也有很多類似函數提供使用。</h5>  
+          <p class="content_info_text_title"> 2. Module</p>
+          <h1 class="content_info_text_h1"> Pytorch Module </h1>
+          pytorch module 是一個 pytorch 寫好的物件，當我們想要自定義網路的時候必須從 nn.Module 繼承 pytorch module 的屬性，在自定義網路中必須包含兩個部分
+     
+
         </div>
 
      </div>
