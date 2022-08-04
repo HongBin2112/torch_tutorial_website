@@ -1,11 +1,26 @@
 
 
 
+/* ID setting */
+
+#part1_content{
+    display: block;
+}
+
+#part2_content{
+    display: block;
+}
+
+#part3_content{
+    display: none;
+}
+
+
+/* misc */
 .title_banner_box{
     margin:5px 0%;
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
 }
-
 
 
 .hr_half_width_center{
@@ -17,7 +32,7 @@
 
 
 
-/**/
+/* content - card*/
 .content_intro_card_box{
     display: flex;
     justify-content: center;
@@ -25,7 +40,6 @@
 
     margin:80px 8% 0px 8%;
     transition : 0.3s;
-    
 }
 
 
@@ -60,18 +74,21 @@
 }
 
 
-/**/
+/* content - info*/
 .content_part_box{
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap:nowrap;  
     position: relative;
+
+    /*visibility: hidden;*/
+
+    transition : 0.5s;
 }
 
 .content_title_box {
     margin:80px 8% 0px 8%;
-    transition : 0.3s;
 }
 
 .content_title{
@@ -79,17 +96,14 @@
     margin:2px auto;
     text-align:center;
     font-size: 48px;
-
-    transition : 0.3s;
-
 }
 
 
-
+/*
 .content_title_box:hover{
     transform : scale(1.01);
 }
-
+*/
 
 .content_info_box{
     
@@ -148,7 +162,17 @@
 
 
 
+/* footer */ 
+.footer_box{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(121, 130, 133, 0.616);
 
+    display: flex;
+    flex-direction: row;
+
+
+}
 
 
 
