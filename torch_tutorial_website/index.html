@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DongDong's torch tutorial website</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./js/index.js"> </script>
+
+  </head>
+
+
+
+  <body style="background-color:#f5f5f5;">
+
+    <!-- [Bootstrap Navbar]  Src: https://getbootstrap.com/docs/5.2/components/navbar/  -->
+    <nav class="navbar navbar-expand-lg bg-light" style="box-shadow: 1px 2px 10px -2px #9c9c9c;">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">DongDong</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Menu</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="https://github.com/DongDong-Zoez/pytorchAI"> Github </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More Info
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="https://github.com/DongDong-Zoez/pytorchAI"> About </a>
+            </li>
+            <!--
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            -->
+
+          </ul>
+
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+        </div>
+
+      </div>
+    </nav>
+
+    
+    <div class="title_banner_box">
+      <img src="./assets/index_title_banner.png" class="img-fluid" alt="title banner background image.">
+    </div>
+
+
+
+
+    <div class="content_intro_card_box">
+
+      <div id="part1_card" class="content_intro_card" onclick="click_change_display('part1_content');">
+
+        <h1>Part I : Pytorch basis</h1>
+        <hr class="hr_half_width_center">
+
+        <ul>
+          <li>Varibale</li>
+          <li>Module</li>
+          <li>dataloader</li>
+          <li>augmentation</li>
+          <li>optimizer</li>
+        </ul>
+
+      </div>
+
+      <div id="part2_card" class="content_intro_card">
+
+        <h1>Part II : CNN tasks</h1>
+        <hr class="hr_half_width_center">
+        
+        <ul>
+          <li>CIFAR-10-classification</li>
+          <li>Federated Learning</li>
+          <li>Segmentation</li>
+          <li>model architecture</li>
+        </ul>        
+
+      </div>
+
+      <div id="part3_card" class="content_intro_card">
+
+        <h1>Part III : Others</h1>
+        <hr class="hr_half_width_center">
+        
+        <ul>
+          <li>ExplainableAI - Grad-CAM </li>
+          <li>CRFs - ConvCRFs</li>
+        </ul>        
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+    <div id="part1_content" class="content_part_box"> 
+      
+      <div class="content_title_box">
+        <p class="content_title"> Part I : Pytorch basis </p>
+        <hr class="hr_half_width_center">
+      </div>
+    
+
+      <div class="content_info_box">
+
+        <div class="content_info_img">
+          <img src="./assets/dongdong_zoez.png"  class="img-fluid" alt="Part I, 1. Varibale" />
+        </div>
+        
+        <div class="content_info_text">
+          <p class="content_info_text_title"> 1. Varibale</p>
+          <h1 class="content_info_text_h1">Pytorch Tensor</h1>
+          
+          在 pytorch 這個框架中，所有的運算、資料流動或是其他數學方法的底層都是張量 (tensor)，pytorch tensor 有著和 Numpy 同樣方便的函數以及操作方法，基本上我們可以直接套用 numpy 的邏輯到 tensor 處理上面，除此之外，也有很多類似函數提供使用。
+        </div>
+
+     </div>
+
+      <div class="content_info_box">
+
+        <div class="content_info_img">
+          <img src="./assets/dongdong_zoez.png"  class="img-fluid" alt="Part I, 2. Module" />
+        </div>
+        
+        <div class="content_info_text">
+          <p class="content_info_text_title"> 2. Module</p>
+          <h1 class="content_info_text_h1"> Pytorch Module </h1>
+          pytorch module 是一個 pytorch 寫好的物件，當我們想要自定義網路的時候必須從 nn.Module 繼承 pytorch module 的屬性，在自定義網路中必須包含兩個部分
+
+        </div>
+     </div>
+
+    </div>
+
+
+
+
+    <div id="part2_content" class="content_part_box"> 
+      
+      <div class="content_title_box">
+        <p class="content_title"> Part II : CNN tasks </p>
+        <hr class="hr_half_width_center">
+      </div>
+    
+
+      <div class="content_info_box">
+
+        <div class="content_info_img">
+          <img src="./assets/dongdong_zoez.png"  class="img-fluid" alt="Part I, 1. Varibale" />
+        </div>
+        
+        <div class="content_info_text">
+          <p class="content_info_text_title"> 1. Varibale</p>
+          <h1 class="content_info_text_h1">Pytorch Tensor</h1>
+          
+          在 pytorch 這個框架中，所有的運算、資料流動或是其他數學方法的底層都是張量 (tensor)，pytorch tensor 有著和 Numpy 同樣方便的函數以及操作方法，基本上我們可以直接套用 numpy 的邏輯到 tensor 處理上面，除此之外，也有很多類似函數提供使用。
+        </div>
+
+     </div>
+
+      <div class="content_info_box">
+
+        <div class="content_info_img">
+          <img src="./assets/dongdong_zoez.png"  class="img-fluid" alt="Part I, 2. Module" />
+        </div>
+        
+        <div class="content_info_text">
+          <p class="content_info_text_title"> 2. Module</p>
+          <h1 class="content_info_text_h1"> Pytorch Module </h1>
+          pytorch module 是一個 pytorch 寫好的物件，當我們想要自定義網路的時候必須從 nn.Module 繼承 pytorch module 的屬性，在自定義網路中必須包含兩個部分
+
+        </div>
+     </div>
+
+    </div>
+
+
+
+
+    <!-- Tail information -->
+    <hr style="width: 80%; margin:50px auto 5px auto;">
+
+    <div class="footer_box">
+      
+    </div>
+
+
+
+
+    
+
+  </body>
+
+
+
+</html>
