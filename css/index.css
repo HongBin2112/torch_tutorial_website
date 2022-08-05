@@ -5,14 +5,20 @@
 
 #part1_content{
     display: block;
+    visibility: hidden;
+    max-height: 0;
 }
 
 #part2_content{
     display: block;
+    visibility: hidden;
+    max-height: 0;
 }
 
 #part3_content{
-    display: none;
+    display: block;
+    visibility: hidden;
+    max-height: 0;
 }
 
 
@@ -30,8 +36,6 @@
 }
 
 
-
-
 /* content - card*/
 .content_intro_card_box{
     display: flex;
@@ -45,20 +49,43 @@
 
 
 .content_intro_card{
+    display: flex;
+    flex-direction: column;
+
     width:30%;
     margin:20px 40px;
     padding: 10px 10px;
+
     border-style: groove;
     border-radius: 8px;
+
     opacity : 0.9;
     transition : 0.5s;
+
 }
+.content_intro_card .show_only_hover{
+    text-align:center;
+    align-self: flex-end;
+    margin-top: auto;
+    opacity: 0;
+    transition : 0.4s
+}
+
 
 
 .content_intro_card:hover{
     box-shadow:5px 14px 8px -2px rgba(0,0,0,0.2);
     opacity : 1;
     transform : scale(1.04);
+
+    cursor: pointer;
+}
+
+.content_intro_card:hover .show_only_hover{
+    text-align:center;
+    align-self: flex-end;
+    margin-top: auto;
+    opacity: 0.6;
 }
 
 
@@ -74,6 +101,9 @@
 }
 
 
+
+
+
 /* content - info*/
 .content_part_box{
     display: flex;
@@ -82,13 +112,22 @@
     flex-wrap:nowrap;  
     position: relative;
 
+    max-height: min-content;
+
     /*visibility: hidden;*/
 
     transition : 0.5s;
+    overflow: hidden;
+}
+
+.content_part_box a{
+    all: unset;
+    cursor: pointer;
 }
 
 .content_title_box {
     margin:80px 8% 0px 8%;
+    
 }
 
 .content_title{
@@ -99,11 +138,6 @@
 }
 
 
-/*
-.content_title_box:hover{
-    transform : scale(1.01);
-}
-*/
 
 .content_info_box{
     
@@ -181,74 +215,9 @@
 
 
 
-/* css when window width<500 */
-
-@media screen and (max-width: 500px){
 
 
 
-    /**/
-    .content_intro_card_box{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-        margin:80px 8% 0px 8%;
-        transition : 0.3s;
-        
-    }
-
-
-
-
-
-
-
-
-
-    .content_title{
-        width:80%;
-        margin:2px auto;
-        text-align:center;
-        font-size: 30px;
-
-    }
-    
-    .content_info_box{
-        font-size:20px;
-        width:auto;
-        padding:1.5% 2%; 
-        margin:50px 8%;  
-
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content_info_img{
-        width:50%;
-        margin:10px auto;
-    }    
-
-
-    .content_info_text{
-        font-size:14px;
-        width: auto; 
-        margin:0px 2% 5px 6%;
-        flex: 1 2 auto;
-    }
-    
-    .content_info_text_title{
-        /*text-align:center;*/
-        font-size:26px;
-        margin:2px 2px 12px;
-    }
-    
-    .content_info_text_h1{
-        font-size:20px;
-        margin:8px 2px;
-    }
-
-} 
 
 
 
