@@ -28,7 +28,7 @@ function click_change_display(element_id){
       x.style.display = "block";
       x.style.visibility = "visible";
       x.style.opacity = "1";
-      //this is the keypoint: smooth expand the content.
+      //This is the keypoint: smoothly expand the content.
       x.style.maxHeight = x.scrollHeight + "px"; 
     }    
 }
@@ -55,7 +55,7 @@ function card_click_show_info(){
 
   }
 
-  //after info shows, click anchor<a> under content_title_box to move.
+  //After info shows, click anchor<a> under content_title_box to move.
   var info_title_anchor = document.getElementById(content_id).getElementsByTagName("a")[0];
   setTimeout(function() {
     info_title_anchor.click();
