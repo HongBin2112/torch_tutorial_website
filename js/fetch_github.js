@@ -11,20 +11,21 @@ print_part_content_on_page(ta_url, "part1_content");
 function print_part_content_on_page(github_api_url, element_id){
 
 	const content_element = document.getElementById(element_id);
-	const content_info_text_element = content_element.getElementsByClassName("content_info_text");
+	const content_info_text_elements = content_element.getElementsByClassName("content_info_text");
 	
-	console.log(content_info_text_element);
+	console.log(content_info_text_elements[0]);
 
 	fetch_file_to_json(github_api_url).then((json_obj) => {
 
-		//var contents = ipynb_json_analysis(json_obj);
 		let table_of_contents = table_of_contents_json_analysis(json_obj);
-		//var html_contents = trans_contents_to_html(contents);
-	
-		//console.log(html_contents);
+
 		test = table_of_contents[0];
 		console.log(test[0], test[1]);
-		console.log(trans_ipynb_to_html(test[0], test[1]));
+		let promise_html_content = trans_ipynb_to_html(test[0], test[1]);
+
+		promise_html_content.then((html_content)=> {
+			content_info_text_elements[0].innerHTML = html_content;
+		})
 		
 	})
 	
@@ -34,11 +35,12 @@ function print_part_content_on_page(github_api_url, element_id){
 
 function trans_ipynb_to_html(name, dl_url){
 
+	let promise_html_content;
 	// Add title
 	let title = name.slice(0, name.indexOf('.ipynb'));
-	title = "<p class=\"content_info_text_title\">" + title + "</p>" +"\n\n";
+	title = "<p class=\"content_info_text_title\">- " + title + "</p>" +"\n\n";
 
-	fetch_file_to_json(dl_url).then((json_obj) => {
+	promise_html_content = fetch_file_to_json(dl_url).then((json_obj) => {
 		let contents = ipynb_json_analysis(json_obj);
 		let html_contents = trans_contents_to_html(contents);
 
@@ -49,6 +51,8 @@ function trans_ipynb_to_html(name, dl_url){
 	.catch((error) => {
 		console.log(`Error: ${error}`);
 	})
+
+	return promise_html_content;
 }
 
 
