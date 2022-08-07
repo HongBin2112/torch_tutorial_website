@@ -1,17 +1,17 @@
 
+
+
+
 const cards_id = ["part1_card", "part2_card", "part3_card"];
 const contents_id = ["part1_content", "part2_content", "part3_content"];
 
-
-var dict_cards_id = {};
+let dict_cards_id = {};
 for(var i = 0; i < cards_id.length; i++){
   dict_cards_id[cards_id[i]] = contents_id[i];
 
-  document.getElementById(cards_id[i]).onclick = card_click_show_info;
+  //put onclick event to html.
+  document.getElementById(cards_id[i]).onclick = click_card_show_info;
 }
-
-
-
 
 
 
@@ -19,7 +19,6 @@ function click_change_display(element_id){
     var x = document.getElementById(element_id);
 
     if (x.style.visibility === "visible") {
-      //x.style.display = "none";
       x.style.visibility = "hidden";
       x.style.opacity = "0";
       x.style.maxHeight = null;
@@ -35,9 +34,11 @@ function click_change_display(element_id){
 
 
 
-function card_click_show_info(){
+function click_card_show_info(){
+
   var card_id = this.id;
   var content_id = dict_cards_id[card_id];
+
 
   for(i = 0; i < cards_id.length; i++){
     var i_content_id = dict_cards_id[cards_id[i]];
